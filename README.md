@@ -63,3 +63,9 @@ This template uses Rubocop and Stylelint for enforcing the code style. In the ro
     -   Support for both SQLite3 and PostgreSQL
         -   SQLite3 for testing/development
         -   PostgreSQL for deploying/production
+
+# Design consideration
+SQLite3 for dev/tst Because of github actions
+Devise as auth
+Boostrap and custom fonts
+Webpack only app (i.e. webpack as the assets pipeline)
