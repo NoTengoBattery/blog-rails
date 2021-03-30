@@ -1,6 +1,6 @@
 {
-  "name": "website-template",
-  "version": "0.30",
+  "name": "NoTengoBlog",
+  "version": "0.01",
   "private": true,
   "dependencies": {
     "@csstools/normalize.css": "^11.0",
