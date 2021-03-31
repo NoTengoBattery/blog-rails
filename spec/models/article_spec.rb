@@ -2,7 +2,7 @@ require "rails_helper"
 require "shared_rutines"
 
 RSpec.describe Article, type: :model do
-  context "validations" do
+  context "with validations" do
     subject { FactoryBot.build(:article) }
 
     it { is_expected.to validate_presence_of(:user_id) }
@@ -14,7 +14,7 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_length_of(:image_caption).is_at_least(Article::IMG_ALT_MIN) }
   end
 
-  context "associations" do
+  context "with associations" do
     subject { FactoryBot.build(:article) }
 
     it { is_expected.to belong_to(:user) }

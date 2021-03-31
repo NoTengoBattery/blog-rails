@@ -3,7 +3,7 @@ require "shared_rutines"
 
 RSpec.describe User, type: :model do
   # Most of the code for the user is already tested by Devise
-  context "validations" do
+  context "with validations" do
     subject { FactoryBot.build(:user) }
 
     it { is_expected.to validate_presence_of(:display) }
@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_uniqueness_of(:display) }
   end
 
-  context "associations" do
+  context "with associations" do
     subject { FactoryBot.build(:user) }
 
     it { is_expected.to have_many(:articles) }

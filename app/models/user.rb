@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :display, presence: true
   validates :display, length: { minimum: User::DISPLAY_MIN, maximum: User::DISPLAY_MAX }
   validates :display, uniqueness: true
+
+  has_many :articles, dependent: :destroy
 end

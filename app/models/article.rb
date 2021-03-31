@@ -12,4 +12,6 @@ class Article < ApplicationRecord
   validates :title, length: { minimum: Article::TITLE_MIN, maximum: Article::TITLE_MAX }
   validates :content, length: { minimum: Article::CONTENT_MIN }
   validates :image_caption, length: { minimum: Article::IMG_ALT_MIN }
+
+  belongs_to :user
 end
