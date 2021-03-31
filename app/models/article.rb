@@ -7,6 +7,7 @@ class Article < ApplicationRecord
 
   validates :user_id, presence: true
   validates :title, presence: true
+  validates :title, uniqueness: { scope: :user_id }
   validates :content, presence: true
   validates :image_caption, presence: true
   validates :title, length: { minimum: Article::TITLE_MIN, maximum: Article::TITLE_MAX }

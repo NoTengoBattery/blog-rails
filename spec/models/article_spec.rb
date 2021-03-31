@@ -12,6 +12,7 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_length_of(:content).is_at_least(Article::CONTENT_MIN) }
     it { is_expected.to validate_presence_of(:image_caption) }
     it { is_expected.to validate_length_of(:image_caption).is_at_least(Article::IMG_ALT_MIN) }
+    it { is_expected.to validate_uniqueness_of(:title).scoped_to(:user_id) }
   end
 
   context "with associations" do
