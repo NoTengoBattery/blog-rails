@@ -13,4 +13,10 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_presence_of(:image_caption) }
     it { is_expected.to validate_length_of(:image_caption).is_at_least(Article::IMG_ALT_MIN) }
   end
+
+  context "associations" do
+    subject { FactoryBot.build(:article) }
+
+    it { is_expected.to belong_to(:user) }
+  end
 end
