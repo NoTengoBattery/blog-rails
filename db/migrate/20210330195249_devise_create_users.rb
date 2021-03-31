@@ -33,7 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       # t.datetime :locked_at
 
       ## Extra and useful user information to display in page
-      t.string :display # This is like twitter's user name
+      t.string :display, null: false # This is like twitter's user name
 
       t.timestamps null: false
     end
