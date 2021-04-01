@@ -1,0 +1,7 @@
+---
+en:
+  errors:
+    messages:
+      blank: can't be blank
+      format: 'must be one of the following formats: %{formats}'
+      oversize: must be less than %{size}

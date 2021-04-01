@@ -18,17 +18,15 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: :User, foreign_key: :user_id, inverse_of: :articles
   has_one_attached :image
 
+  # rubocop:disable Metrics/AbcSize
   def acceptable_image
-    unless image.attached?
-      errors.add(:image, I18n.t("errors.messages.blank"))
-      return
-    end
+    types = ["image/jpeg", "image/png", "image/tiff"]
+    mbytes = 5.megabyte
+    (errors.add(:image, I18n.t("errors.messages.blank")); return) unless image.attached?
+    errors.add(:image, I18n.t("errors.messages.oversize", size: "#{mbytes} byest")) unless image.byte_size <= mbytes
+    return if types.include?(image.content_type)
 
-    errors.add(:image, I18n.t("errors.messages.oversize", size: "5 MB")) unless image.byte_size <= 5.megabyte
-
-    acceptable_types = ["image/jpeg", "image/png", "image/tiff"]
-    unless acceptable_types.include?(image.content_type)
-      errors.add(:image, I18n.t("errors.messages.format", formats: "JPG, PNG, TIFF"))
-    end
+    errors.add(:image, I18n.t("errors.messages.format", formats: types.join(",")))
   end
+  # rubocop:enable Metrics/AbcSize
 end

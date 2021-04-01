@@ -16,6 +16,8 @@ class RemoteArticle
   validates :article_url, presence: true
 
   def initialize(params = {})
+    return if params.nil?
+
     @author = params["author"] || params["source"]["name"]
     @title = params["title"]
     @content = params["content"]
@@ -29,8 +31,9 @@ class RemoteArticle
   # Build is a factory that will build the n-th element where 'n' comes from Pageable
   def self.build(keyword)
     uri = build_query(q_in_title: keyword, page: page_id)
-    response = JSON.parse(RestClient.get(uri.to_s))
-    new(response["articles"][current_element_id])
+    response = -> { JSON.parse(RestClient.get(uri.to_s)) }
+    article = -> { new(response.call["articles"][current_element_id]) }
+    article.call
   end
 
   def self.build_query(arg = {})
