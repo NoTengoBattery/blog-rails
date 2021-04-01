@@ -5,7 +5,6 @@ class Article < ApplicationRecord
   TITLE_MAX = 60
   TITLE_MIN = 5
 
-  validates :user_id, presence: true
   validates :title, presence: true
   validates :title, uniqueness: { scope: :user_id }
   validates :content, presence: true

@@ -5,7 +5,6 @@ RSpec.describe Article, type: :model do
   context "with validations" do
     subject { FactoryBot.build(:article) }
 
-    it { is_expected.to validate_presence_of(:user_id) }
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_length_of(:title).is_at_least(Article::TITLE_MIN).is_at_most(Article::TITLE_MAX) }
     it { is_expected.to validate_presence_of(:content) }
