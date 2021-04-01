@@ -43,6 +43,7 @@ es:
     messages:
       format: 'debe tener uno de los siguientes formatos: %{formats}'
       oversize: tiene que tener un tamaño menor %{size}
+      unauthorized: "No estás autorizado para realizar esa acción"
     template:
       body: 'Revise que los siguientes campos sean válidos:'
       header:
