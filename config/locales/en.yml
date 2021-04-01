@@ -1,7 +1,35 @@
 ---
 en:
+  close: "Close"
   errors:
     messages:
       blank: can't be blank
       format: 'must be one of the following formats: %{formats}'
       oversize: must be less than %{size}
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+    attributes:
+      article:
+        title:
+          one: Title
+          other: Titles
+        content:
+          one: Content
+          other: Contents
+        image_caption:
+          one: Image caption
+          other: Image captions
+        image:
+          one: Image
+          other: Images
+        author:
+          one: Author
+          other: Authors

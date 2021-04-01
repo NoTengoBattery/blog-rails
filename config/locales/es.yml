@@ -1,0 +1,35 @@
+---
+es:
+  close: "Cerrar"
+  errors:
+    messages:
+      blank: no puede estar en blanco
+      format: 'debe tener uno de los siguientes formatos: %{formats}'
+      oversize: tiene que tener un tamaño menor %{size}
+    template:
+      body: 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: "%{model} no pudo guardarse debido a 1 error"
+        other: "%{model} no pudo guardarse debido a %{count} errores"
+  activerecord:
+    models:
+      article:
+        one: Artículo
+        other: Artículos
+    attributes:
+      article:
+        title:
+          one: Título
+          other: Títulos
+        content:
+          one: Contenido
+          other: Contenidos
+        image_caption:
+          one: Descripción de la imagen
+          other: Descripciones de la imagen
+        image:
+          one: Imagen
+          other: Imágenes
+        author:
+          one: Autor
+          other: Autores
