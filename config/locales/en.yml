@@ -1,9 +1,41 @@
 ---
 en:
-  close: "Close"
+  actions:
+    article:
+      submit: Publish
+    write: Write
+  activerecord:
+    attributes:
+      article:
+        author:
+          one: Author
+          other: Authors
+        content:
+          one: Content
+          other: Contents
+        image:
+          one: Image
+          other: Images
+        image_caption:
+          one: Image caption
+          other: Image captions
+        title:
+          one: Title
+          other: Titles
+      user:
+        display:
+          one: User name
+          other: User names
+        email:
+          one: Email
+          other: Emails
+    models:
+      article:
+        one: Article
+        other: Articles
+  close: Close
   errors:
     messages:
-      blank: can't be blank
       format: 'must be one of the following formats: %{formats}'
       oversize: must be less than %{size}
     template:
@@ -11,25 +43,10 @@ en:
       header:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
-  activerecord:
-    models:
-      article:
-        one: Article
-        other: Articles
-    attributes:
-      article:
-        title:
-          one: Title
-          other: Titles
-        content:
-          one: Content
-          other: Contents
-        image_caption:
-          one: Image caption
-          other: Image captions
-        image:
-          one: Image
-          other: Images
-        author:
-          one: Author
-          other: Authors
+  home: Home
+  name: Blog
+  nav:
+    toggle: Toggle navigation bar
+  success:
+    messages:
+      created: "%{model} has been successfully created"

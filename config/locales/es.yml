@@ -1,9 +1,41 @@
 ---
 es:
-  close: "Cerrar"
+  actions:
+    article:
+      submit: Publicar
+    write: Escribir
+  activerecord:
+    attributes:
+      article:
+        author:
+          one: Autor
+          other: Autores
+        content:
+          one: Contenido
+          other: Contenidos
+        image:
+          one: Imagen
+          other: Imágenes
+        image_caption:
+          one: Descripción de la imagen
+          other: Descripciones de la imagen
+        title:
+          one: Título
+          other: Títulos
+      user:
+        display:
+          one: Nombre de usuario
+          other: Nombres de usuario
+        email:
+          one: Correo electrónico
+          other: Correos electrónicos
+    models:
+      article:
+        one: Artículo
+        other: Artículos
+  close: Cerrar
   errors:
     messages:
-      blank: no puede estar en blanco
       format: 'debe tener uno de los siguientes formatos: %{formats}'
       oversize: tiene que tener un tamaño menor %{size}
     template:
@@ -11,35 +43,10 @@ es:
       header:
         one: "%{model} no pudo guardarse debido a 1 error"
         other: "%{model} no pudo guardarse debido a %{count} errores"
-  activerecord:
-    models:
-      article:
-        one: Artículo
-        other: Artículos
-      user:
-        one: Usuario
-        other: Usuarios
-    attributes:
-      user:
-        email:
-          one: Correo electrónico
-          other: Correos electrónicos
-        display:
-          one: Nombre de usuario
-          other: Nombres de usuario
-      article:
-        title:
-          one: Título
-          other: Títulos
-        content:
-          one: Contenido
-          other: Contenidos
-        image_caption:
-          one: Descripción de la imagen
-          other: Descripciones de la imagen
-        image:
-          one: Imagen
-          other: Imágenes
-        author:
-          one: Autor
-          other: Autores
+  home: Inicio
+  name: Blog
+  nav:
+    toggle: Mostrar/ocultar barra de navegación
+  success:
+    messages:
+      created: "%{model} se ha creado exitosamente"

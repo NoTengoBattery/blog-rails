@@ -25,7 +25,7 @@ class Article < ApplicationRecord
     errors.add(:image, I18n.t("errors.messages.oversize", size: "#{mbytes} byest")) unless image.byte_size <= mbytes
     return if types.include?(image.content_type)
 
-    errors.add(:image, I18n.t("errors.messages.format", formats: types.join(",")))
+    errors.add(:image, I18n.t("errors.messages.format", formats: types.join(", ")))
   end
   # rubocop:enable Metrics/AbcSize
 end

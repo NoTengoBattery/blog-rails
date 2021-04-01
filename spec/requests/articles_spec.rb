@@ -5,20 +5,23 @@ require "shared_rutines"
 RSpec.describe "/articles", type: :request do
   include ActionDispatch::TestProcess::FixtureFile
 
+  before do
+    sign_in User.find(valid_attributes[:user_id])
+  end
+
   let(:valid_attributes) do
     article = FactoryBot.build(:article)
     valid_object = {}
-    valid_object[:user_id] = article.user_id
     valid_object[:title] = article.title
     valid_object[:content] = article.content
     valid_object[:image_caption] = article.image_caption
     valid_object[:image] = fixture_file_upload(file_fixture("test.jpg"), "image/jpeg")
+    valid_object[:user_id] = article.user_id
     valid_object
   end
 
   let(:invalid_attributes) do
     invalid_object = {}
-    invalid_object[:user_id] = 0
     invalid_object[:title] = ""
     invalid_object[:content] = ""
     invalid_object[:image_caption] = ""
