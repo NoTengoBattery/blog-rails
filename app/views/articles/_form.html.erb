@@ -1,27 +1,22 @@
 <%= form_with(model: article) do |form| %>
   <%= render 'shared/form_errors', inst: article %>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+  <div class="form-group">
+    <%= form.label :title, attr_name(:title, article) %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :image, attr_name(:image, article) %>
+    <%= form.file_field :image, class: "form-control-file" %>
   </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="form-group">
+    <%= form.label :image_caption, attr_name(:image_caption, article) %>
+    <%= form.text_field :image_caption, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :image_caption %>
-    <%= form.text_field :image_caption %>
+  <div class="form-group">
+    <%= form.label :content, attr_name(:content, article) %>
+    <%= form.text_area :content, class: "form-control" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit t(".submit"), class: "btn btn-primary" %>
   </div>
 <% end %>

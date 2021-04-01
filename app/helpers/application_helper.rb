@@ -14,4 +14,8 @@ module ApplicationHelper
       "alert alert-primary"
     end
   end
+
+  def attr_name(attr, res)
+    res.class.human_attribute_name(attr)
+  end
 end

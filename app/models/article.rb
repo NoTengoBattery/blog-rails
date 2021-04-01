@@ -7,12 +7,12 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :user_id }
-  validates :content, presence: true
-  validates :image_caption, presence: true
   validates :title, length: { minimum: Article::TITLE_MIN, maximum: Article::TITLE_MAX }
-  validates :content, length: { minimum: Article::CONTENT_MIN }
-  validates :image_caption, length: { minimum: Article::IMG_ALT_MIN }
   validate :acceptable_image
+  validates :image_caption, presence: true
+  validates :image_caption, length: { minimum: Article::IMG_ALT_MIN }
+  validates :content, presence: true
+  validates :content, length: { minimum: Article::CONTENT_MIN }
 
   belongs_to :author, class_name: :User, foreign_key: :user_id, inverse_of: :articles
   has_one_attached :image
