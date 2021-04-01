@@ -1,26 +1,28 @@
-<div class="row">
+<aside class="row">
   <div class="col-7">
-    <%= article_image(article, class: "img-fluid article-cover-index", alt: article.image_caption) %>
+    <div class="r-16-9">
+      <%= article_image article, class: "abs-cover", alt: article.image_caption -%>
+    </div>
   </div>
-  <aside class="col-5 order-1">
-    <h1 class="mt-2"><%= article_link(article, class: "text-body") %></h1>
+  <div class="col-5 order-1">
+    <h1 class="h2 font-weight-bold mt-2"><%= article_link article, class: "text-body" -%></h1>
     <div class="mt-2">
-      <div class="multiline-text"><%= truncate_text(article.content, 200) %></div>
+      <div class="multiline-text"><%= truncate_text article.content, 200 -%></div>
     </div>
     <div>
       <span>
         <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
-        <%= t("misc.article.by") %>
-        <%= article_author(article) %>
+        <%= t("misc.article.by") -%>
+        <%= article_author article -%>
       </span>
     </div>
     <div>
       <span>
         <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
-        <%= t("misc.article.on_date") %>
-        <%= l(article.created_at) %>
+        <%= t("misc.article.on_date") -%>
+        <%= l(article.created_at) -%>
       </span>
     </div>
-  </aside>
-</div>
+  </div>
+</aside>
 <hr class="w-100">

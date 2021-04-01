@@ -2,7 +2,10 @@
 es:
   actions:
     article:
+      edit: Editar
       submit: Publicar
+    delete: Eliminar %{model}
+    edit: Editar %{model}
     new: Nuevo %{model}
     sign_out: Cerrar sesión
     write: Escribir
@@ -51,7 +54,6 @@ es:
   misc:
     article:
       by: Por
-      edit: Editar artículo
       on_date: El
       ours: Nuestros artículos
       theirs: Artículos relacionados
@@ -61,3 +63,5 @@ es:
   success:
     messages:
       created: "%{model} se ha creado exitosamente"
+  warnings:
+    sure: "¿Estás seguro? Una vez realizada, esta acción no se puede deshacer."

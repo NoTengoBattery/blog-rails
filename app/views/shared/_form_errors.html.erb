@@ -1,20 +1,20 @@
-<% if inst.errors.any? %>
+<%- if inst.errors.any? -%>
   <div id="error-explanation" class="alert alert-warning">
-  <button type="button" class="close" data-dismiss="alert" aria-label="<%= t("close") %>">
+  <button type="button" class="close" data-dismiss="alert" aria-label="<%= t("close") -%>">
     <span aria-hidden="true" class="iconify" data-icon="ri:close-circle-fill" data-inline="false"></span>
   </button>
     <p class="lead">
       <strong>
-        <%= t("errors.template.header", count: inst.errors.count, model:  inst.class.model_name.human) %>
+        <%= t("errors.template.header", count: inst.errors.count, model:  inst.class.model_name.human) -%>
       </strong>
     </p>
     <span>
-      <%= t("errors.template.body") %>
+      <%= t("errors.template.body") -%>
     </span>
     <ul>
-      <% inst.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
+      <%- inst.errors.each do |error| -%>
+        <li><%= error.full_message -%></li>
+      <%- end -%>
     </ul>
   </div>
-<% end %>
+<%- end -%>

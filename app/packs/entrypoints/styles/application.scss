@@ -6,3 +6,20 @@
 .text-sans {
   font-family: $font-family-sans;
 }
+
+.r-16-9 {
+  padding-top: calc(9 * 100% / 16);
+  position: relative;
+  width: 100%;
+}
+
+.abs-cover {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}

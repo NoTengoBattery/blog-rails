@@ -1,24 +1,24 @@
 <ul class="nav nav-tabs d-flex justify-content-center mb-2" id="mainTabs" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="localTab" data-toggle="tab" href="#local" role="tab" aria-controls="<%= t("local") %>" aria-selected="true">
-      <%= t("misc.article.ours") %>
+    <a class="nav-link active" id="localTab" data-toggle="tab" href="#local" role="tab" aria-controls="<%= t("local") -%>" aria-selected="true">
+      <%= t("misc.article.ours") -%>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="remoteTab" data-toggle="tab" href="#remote" role="tab" aria-controls="<%= t("external") %>" aria-selected="false">
-      <%= t("misc.article.theirs") %>
+    <a class="nav-link" id="remoteTab" data-toggle="tab" href="#remote" role="tab" aria-controls="<%= t("external") -%>" aria-selected="false">
+      <%= t("misc.article.theirs") -%>
     </a>
   </li>
 </ul>
-<div class="tab-content" id="myTabContent">
+<main class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="local" role="tabpanel" aria-labelledby="localTab">
     <div id="localList" class="list-group">
-      <%= render partial: "list", collection: @articles, as: :article %>
+      <%= render partial: "list", collection: @articles, as: :article -%>
     </div>
   </div>
   <div class="tab-pane fade show" id="remote" role="tabpanel" aria-labelledby="remoteTab">
     <div id="remoteList" class="list-group">
-      <%= render partial: "list", collection: @remote_articles, as: :article %>
+      <%= render partial: "list", collection: @remote_articles, as: :article -%>
     </div>
   </div>
-</div>
+</main>
