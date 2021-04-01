@@ -45,11 +45,16 @@ es:
       header:
         one: "%{model} no pudo guardarse debido a 1 error"
         other: "%{model} no pudo guardarse debido a %{count} errores"
+  external: Externo
   home: Inicio
+  local: Local
   misc:
     article:
       by: Por
+      edit: Editar artículo
       on_date: El
+      ours: Nuestros artículos
+      theirs: Artículos relacionados
   name: Blog
   nav:
     toggle: Mostrar/ocultar barra de navegación

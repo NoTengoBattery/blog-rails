@@ -18,4 +18,8 @@ module ApplicationHelper
   def attr_name(attr, res)
     res.class.human_attribute_name(attr)
   end
+
+  def truncate_text(text, size)
+    "#{text[0..size]}…"
+  end
 end

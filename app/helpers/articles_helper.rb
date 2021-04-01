@@ -1,10 +1,14 @@
 module ArticlesHelper
-  def img_large(record = @article)
+  def img_large(record)
     img_scale(record: record, w: 1920, h: 1080)
   end
 
-  def img_medium(record = @article)
-    img_scale(record: record, w: 480, h: 480)
+  def img_medium(record)
+    img_scale(record: record, w: 735, h: 415)
+  end
+
+  def img_small(record)
+    img_scale(record: record, w: 480, h: 270)
   end
 
   private

@@ -45,11 +45,16 @@ en:
       header:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
+  external: External
   home: Home
+  local: Local
   misc:
     article:
       by: By
+      edit: Edit article
       on_date: 'On'
+      ours: Our articles
+      theirs: Related articles
   name: Blog
   nav:
     toggle: Toggle navigation bar

@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-7">
+    <%= image_tag(img_large(article), class: "img-fluid article-cover-index", alt: article.image_caption) %>
+  </div>
+  <aside class="col-5 order-1">
+    <h1 class="mt-2"><%= link_to article.title, article_path(article), class: "text-body" %></h1>
+    <div class="mt-2">
+      <div class="multiline-text"><%= truncate_text(article.content, 200) %></div>
+    </div>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+        <%= t("misc.article.by") %>
+        <!-- TODO -->
+        <%= link_to article.author.display, home_path %>
+      </span>
+    </div>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
+        <%= t("misc.article.on_date") %>
+        <%= l(article.created_at) %>
+      </span>
+    </div>
+  </aside>
+</div>
+<hr class="w-100">
