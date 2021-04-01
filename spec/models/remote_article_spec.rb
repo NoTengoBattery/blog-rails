@@ -16,8 +16,9 @@ RSpec.describe RemoteArticle, type: :model do
   context "with URI" do
     it "generates a valid NewsAPI query URL" do
       k = Rails.application.credentials.newsapi[:api_key]
+      p = described_class::PAGGER
       got = described_class.build_query(q_in_title: "q", sort_by: "s")
-      expected = URI.parse("https://newsapi.org/v2/everything?apiKey=#{k}&qInTitle=q&sortBy=s&pageSize=10&page=1")
+      expected = URI.parse("https://newsapi.org/v2/everything?apiKey=#{k}&qInTitle=q&sortBy=s&pageSize=#{p}&page=1")
       expect(got).to eq(expected)
     end
   end
@@ -36,13 +37,17 @@ RSpec.describe RemoteArticle, type: :model do
     end
 
     it "calculates the page correctly" do
-      described_class.element_id = 30
-      expect(described_class.page_id).to eq(4)
+      id = 30
+      page = ((id + 1) / described_class::PAGGER.to_f).ceil
+      described_class.element_id = id
+      expect(described_class.page_id).to eq(page)
     end
 
     it "calculates the page offset correctly" do
-      described_class.element_id = 39
-      expect(described_class.element_offset_id).to eq(9)
+      id = 39
+      offset = id % described_class::PAGGER
+      described_class.element_id = id
+      expect(described_class.element_offset_id).to eq(offset)
     end
   end
 
