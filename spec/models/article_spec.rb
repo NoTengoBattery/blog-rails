@@ -18,6 +18,6 @@ RSpec.describe Article, type: :model do
   context "with associations" do
     subject { FactoryBot.build(:article) }
 
-    it { is_expected.to belong_to(:user) }
+    it { is_expected.to belong_to(:author) }
   end
 end

@@ -14,5 +14,5 @@ class Article < ApplicationRecord
   validates :content, length: { minimum: Article::CONTENT_MIN }
   validates :image_caption, length: { minimum: Article::IMG_ALT_MIN }
 
-  belongs_to :user
+  belongs_to :author, class_name: :User, foreign_key: :user_id, inverse_of: :articles
 end
