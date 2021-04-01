@@ -69,3 +69,5 @@ SQLite3 for dev/tst Because of github actions
 Devise as auth
 Boostrap and custom fonts
 Webpack only app (i.e. webpack as the assets pipeline)
+How to put the API key in the Credentials store
+Rails.application.credentials.newsapi[:api_key]

@@ -1,24 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @article.user_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Image caption:</strong>
-  <%= @article.image_caption %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<main>
+  <article>
+    <%= image_tag img_large(@article), class: "img-fluid article-cover", alt: @article.image_caption -%>
+    <h1 class="mt-2"><%= @article.title -%></h1>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+        <%= t("misc.article.by") -%>
+        <!-- TODO -->
+        <%= link_to @article.author.display, home_path -%>
+      </span>
+    </div>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
+        <%= t("misc.article.on_date") -%>
+        <%= l(@article.created_at) -%>
+      </span>
+    </div>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:edit-fill" data-inline="false"></span>
+        <%= link_to t("actions.edit", model: @article.model_name.human), edit_article_path(@article) -%>
+      </span>
+    </div>
+    <div class="mt-2">
+      <div class="multiline-text"><%= @article.content -%></div>
+    </div>
+  </article>
+</main>

@@ -1,0 +1,67 @@
+---
+en:
+  actions:
+    article:
+      edit: Edit
+      submit: Publish
+    delete: Delete %{model}
+    edit: Edit %{model}
+    new: New %{model}
+    sign_out: Log out
+    write: Write
+  activerecord:
+    attributes:
+      article:
+        author:
+          one: Author
+          other: Authors
+        content:
+          one: Content
+          other: Contents
+        image:
+          one: Image
+          other: Images
+        image_caption:
+          one: Image caption
+          other: Image captions
+        title:
+          one: Title
+          other: Titles
+      user:
+        display:
+          one: User name
+          other: User names
+        email:
+          one: Email
+          other: Emails
+    models:
+      article:
+        one: Article
+        other: Articles
+  close: Close
+  errors:
+    messages:
+      format: 'must be one of the following formats: %{formats}'
+      oversize: must be less than %{size}
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+  external: External
+  home: Home
+  local: Local
+  misc:
+    article:
+      by: By
+      on_date: 'On'
+      ours: Our articles
+      theirs: Related articles
+  name: Blog
+  nav:
+    toggle: Toggle navigation bar
+  success:
+    messages:
+      created: "%{model} has been successfully created"
+  warnings:
+    sure: Are you sure? Once executed, this action can not be undone.

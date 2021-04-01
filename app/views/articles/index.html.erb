@@ -1,33 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Image caption</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.user_id %></td>
-        <td><%= article.title %></td>
-        <td><%= article.content %></td>
-        <td><%= article.image_caption %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+<ul class="nav nav-tabs d-flex justify-content-center mb-2" id="mainTabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="localTab" data-toggle="tab" href="#local" role="tab" aria-controls="<%= t("local") -%>" aria-selected="true">
+      <%= t("misc.article.ours") -%>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="remoteTab" data-toggle="tab" href="#remote" role="tab" aria-controls="<%= t("external") -%>" aria-selected="false">
+      <%= t("misc.article.theirs") -%>
+    </a>
+  </li>
+</ul>
+<main class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="local" role="tabpanel" aria-labelledby="localTab">
+    <div id="localList" class="list-group">
+      <%= render partial: "list", collection: @articles, as: :article -%>
+    </div>
+  </div>
+  <div class="tab-pane fade show" id="remote" role="tabpanel" aria-labelledby="remoteTab">
+    <div id="remoteList" class="list-group">
+      <%= render partial: "list", collection: @remote_articles, as: :article -%>
+    </div>
+  </div>
+</main>
