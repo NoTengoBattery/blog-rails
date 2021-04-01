@@ -3,6 +3,8 @@ require "shared_rutines"
 
 # rubocop:disable Metrics/BlockLength
 RSpec.describe "/articles", type: :request do
+  include ActionDispatch::TestProcess::FixtureFile
+
   let(:valid_attributes) do
     article = FactoryBot.build(:article)
     valid_object = {}
@@ -10,6 +12,7 @@ RSpec.describe "/articles", type: :request do
     valid_object[:title] = article.title
     valid_object[:content] = article.content
     valid_object[:image_caption] = article.image_caption
+    valid_object[:image] = fixture_file_upload(file_fixture("test.jpg"), "image/jpeg")
     valid_object
   end
 
