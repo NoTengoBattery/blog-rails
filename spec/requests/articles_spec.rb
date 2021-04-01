@@ -1,6 +1,7 @@
 require "rails_helper"
 require "shared_rutines"
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe "/articles", type: :request do
   let(:valid_attributes) do
     article = FactoryBot.build(:article)
@@ -125,3 +126,4 @@ RSpec.describe "/articles", type: :request do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

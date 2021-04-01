@@ -10,4 +10,14 @@ RSpec.describe RemoteArticle, type: :model do
       expect(got).to eq(expected)
     end
   end
+
+  context "with paggeable counter" do
+    it "keeps track of the last requested article" do
+      total_times = rand(10)
+      total_times.times do
+        described_class.next_element_id
+      end
+      expect(described_class.current_element_id).to eq(total_times)
+    end
+  end
 end
