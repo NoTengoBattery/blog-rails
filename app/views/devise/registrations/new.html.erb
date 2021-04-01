@@ -1,27 +1,27 @@
-<h2><%= t('.sign_up') %></h2>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<h2 class="text-center"><%= t('.sign_up') %></h2>
   <%= render 'shared/form_errors', inst: resource %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "col-6 mx-auto "}) do |f| %>
+  <div class="form-group">
+    <%= f.label :email, attr_name(:email, resource) %><br />
+    <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email" %>
   </div>
-  <div class="field">
-    <%= f.label :display %><br />
-    <%= f.email_field :display %>
+  <div class="form-group">
+    <%= f.label :display, attr_name(:display, resource) %><br />
+    <%= f.email_field :display, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :password %>
+  <div class="form-group">
+    <%= f.label :password, attr_name(:password, resource) %>
     <% if @minimum_password_length %>
     <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, class: "form-control", autocomplete: "new-password" %>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-group">
+    <%= f.label :password_confirmation, attr_name(:password_confirmation, resource)  %><br />
+    <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password" %>
   </div>
-  <div class="actions">
-    <%= f.submit t('.sign_up') %>
+  <div class="form-group">
+    <%= f.submit t('.sign_up'), class: "btn btn-primary" %>
   </div>
+  <%= render "devise/shared/links" %>
 <% end %>
-<%= render "devise/shared/links" %>

@@ -16,7 +16,17 @@ es:
       article:
         one: Artículo
         other: Artículos
+      user:
+        one: Usuario
+        other: Usuarios
     attributes:
+      user:
+        email:
+          one: Correo electrónico
+          other: Correos electrónicos
+        display:
+          one: Nombre de usuario
+          other: Nombres de usuario
       article:
         title:
           one: Título

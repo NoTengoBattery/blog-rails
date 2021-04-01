@@ -15,4 +15,8 @@ module UserHelper
       link_to I18n.t("devise.shared.links.sign_in"), user_session_path, params
     end
   end
+
+  def attr_name(attr, res = @user)
+    res.class.human_attribute_name(attr)
+  end
 end
