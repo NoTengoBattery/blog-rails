@@ -1,7 +1,7 @@
 module UserHelper
   def sign_up_or_profile(params = {})
     if signed_in?
-      link_to current_user.display, current_user, params
+      link_to current_user.display, home_path, params # TODO
     else
       link_to I18n.t("devise.shared.links.sign_up"), new_user_registration_path, params
     end
