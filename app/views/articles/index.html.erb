@@ -12,9 +12,13 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="local" role="tabpanel" aria-labelledby="localTab">
-    <div class="list-group">
+    <div id="localList" class="list-group">
       <%= render partial: "list", collection: @articles, as: :article %>
     </div>
   </div>
-  <div class="tab-pane fade show" id="remote" role="tabpanel" aria-labelledby="remoteTab">Remote</div>
+  <div class="tab-pane fade show" id="remote" role="tabpanel" aria-labelledby="remoteTab">
+    <div id="remoteList" class="list-group">
+      <%= render partial: "list", collection: @remote_articles, as: :article %>
+    </div>
+  </div>
 </div>

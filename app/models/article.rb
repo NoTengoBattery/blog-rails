@@ -17,6 +17,8 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: :User, foreign_key: :user_id, inverse_of: :articles
   has_one_attached :image
 
+  scope :eager, -> { with_attached_image }
+
   # rubocop:disable Metrics/AbcSize
   def acceptable_image
     types = ["image/jpeg", "image/png", "image/tiff"]

@@ -20,6 +20,6 @@ module ApplicationHelper
   end
 
   def truncate_text(text, size)
-    "#{text[0..size]}…"
+    "#{text[0...(size - 1)]}…"
   end
 end
