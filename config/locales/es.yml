@@ -3,6 +3,8 @@ es:
   actions:
     article:
       submit: Publicar
+    new: Nuevo %{model}
+    sign_out: Cerrar sesión
     write: Escribir
   activerecord:
     attributes:
@@ -44,6 +46,10 @@ es:
         one: "%{model} no pudo guardarse debido a 1 error"
         other: "%{model} no pudo guardarse debido a %{count} errores"
   home: Inicio
+  misc:
+    article:
+      by: Por
+      on_date: El
   name: Blog
   nav:
     toggle: Mostrar/ocultar barra de navegación

@@ -3,6 +3,8 @@ en:
   actions:
     article:
       submit: Publish
+    new: New %{model}
+    sign_out: Log out
     write: Write
   activerecord:
     attributes:
@@ -44,6 +46,10 @@ en:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
   home: Home
+  misc:
+    article:
+      by: By
+      on_date: 'On'
   name: Blog
   nav:
     toggle: Toggle navigation bar

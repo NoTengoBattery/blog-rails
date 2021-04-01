@@ -10,7 +10,7 @@ module UserHelper
   def sign_in_or_out(params = {})
     if signed_in?
       params[:method] = :delete
-      link_to I18n.t("devise.shared.links.sign_out"), destroy_user_session_path, params
+      link_to I18n.t("actions.sign_out"), destroy_user_session_path, params
     else
       link_to I18n.t("devise.shared.links.sign_in"), user_session_path, params
     end

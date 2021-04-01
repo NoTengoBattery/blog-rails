@@ -1,5 +1,2 @@
-<h1>New Article</h1>
-
+<h2><%= t("actions.new", model: @article.model_name.human) %></h2>
 <%= render 'form', article: @article %>
-
-<%= link_to 'Back', articles_path %>

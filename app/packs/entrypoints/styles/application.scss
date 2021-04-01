@@ -1,3 +1,4 @@
-@use '@csstools/normalize.css/normalize';
-@use 'modules/fontsource';
-@use 'modules/bootstrap';
+@use '@csstools/normalize.css/normalize' as *;
+@use 'modules/fontsource' as *;
+@use 'modules/bootstrap' as *;
+@use 'articles';
