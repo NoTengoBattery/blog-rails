@@ -21,5 +21,6 @@
     <div id="remoteList" class="list-group articles-list">
       <%= render partial: "list", collection: @remote_articles, as: :article -%>
     </div>
+    <%= paginate @remote_articles, param_name: :remote -%>
   </div>
 </main>

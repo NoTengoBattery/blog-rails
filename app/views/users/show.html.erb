@@ -15,3 +15,4 @@
 <div id="localList" class="list-group">
   <%= render partial: "articles/list", collection: @articles, as: :article -%>
 </div>
+<%= paginate @articles -%>

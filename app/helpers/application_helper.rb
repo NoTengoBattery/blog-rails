@@ -10,6 +10,8 @@ module ApplicationHelper
       "alert alert-danger"
     when "notice"
       "alert alert-success"
+    when "info"
+      "alert alert-info"
     else
       "alert alert-primary"
     end
@@ -21,5 +23,11 @@ module ApplicationHelper
 
   def truncate_text(text, size)
     "#{text[0...(size - 1)]}…"
+  end
+
+  def social_link(link, icon)
+    link_to(link, class: "nav-link d-flex align-items-center justify-content-around footer-social") do
+      tag.span("", class: :iconify, "data-icon": "cib:#{icon}", "data-inline": false)
+    end
   end
 end
