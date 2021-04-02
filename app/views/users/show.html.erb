@@ -5,7 +5,7 @@
 <%- if authorized?(@user) -%>
   <p>
     <span class="iconify" data-icon="ri:edit-fill" data-inline="false"></span>
-    <%= link_to t("actions.edit", model: @user.model_name.human), edit_user_registration_path -%>
+    <%= link_to t("actions.edit", model: @user.model_name.human).humanize, edit_user_registration_path -%>
   </p>
 <%- end -%>
 <h2>
