@@ -12,13 +12,13 @@
 </ul>
 <main class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="local" role="tabpanel" aria-labelledby="localTab">
-    <div id="localList" class="list-group">
+    <div id="localList" class="list-group articles-list">
       <%= render partial: "list", collection: @articles, as: :article -%>
-      <%= paginate @articles -%>
     </div>
+    <%= paginate @articles, param_name: :local -%>
   </div>
   <div class="tab-pane fade show" id="remote" role="tabpanel" aria-labelledby="remoteTab">
-    <div id="remoteList" class="list-group">
+    <div id="remoteList" class="list-group articles-list">
       <%= render partial: "list", collection: @remote_articles, as: :article -%>
     </div>
   </div>

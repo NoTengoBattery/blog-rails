@@ -8,3 +8,9 @@
   height: 50vh;
   min-height: 210px;
 }
+
+.articles-list {
+  hr:last-child{
+    display: none;
+  }
+}

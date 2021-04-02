@@ -4,7 +4,7 @@ class RemoteArticle
   extend ActiveModel::Naming
   extend Pageable
 
-  PAGGER = 10
+  PAGGER = Kaminari.config.default_per_page
 
   attr_accessor :author, :title, :content, :image_caption, :image_url, :article_url, :created_at
 
