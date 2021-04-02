@@ -33,9 +33,20 @@ class RemoteArticle
   # Build is a factory that will build the n-th element where 'n' comes from Pageable
   def self.build(keyword)
     uri = build_query(q_in_title: keyword, page: page_id).to_s
-    response = -> { Rails.cache.fetch(uri, expires_in: 3.hours) { JSON.parse(RestClient.get(uri)) } }
-    article = -> { new(uri, (response.call)["articles"][current_element_id]) }
+    article = -> { new(uri, (cached_remote_response(uri))["articles"][element_offset_id]) }
+    puts "{ page: #{page_id} ; current_element_id: #{current_element_id} ; element_offset_id : #{element_offset_id} }"
     article.call
+  end
+
+  def self.cached_remote_response(uri)
+    Rails.cache.fetch(uri, expires_in: 3.hours) do
+      JSON.parse(RestClient.get(uri))
+    end
+  end
+
+  def self.total_articles(keyword)
+    uri = build_query(q_in_title: keyword, page: page_id).to_s
+    cached_remote_response(uri)["totalResults"]
   end
 
   def self.build_query(arg = {})
