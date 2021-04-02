@@ -1,11 +1,6 @@
 # rubocop:disable Style/ClassVars
 module Pageable
   @@current_element = 0
-  @@cache = {}
-
-  def cached_page(page, keyword) = @@cache[keyword][page]
-
-  def cache_page(page, keyword, result) = @@cache[keyword][page] = result
 
   def current_element_id() = @@current_element
 
@@ -23,7 +18,8 @@ module Pageable
     self.element_id = (number - 1) * self::PAGGER
     collection = []
     self::PAGGER.times do
-      collection << build(keyword)
+      built = build(keyword)
+      collection << built if built.valid?
       next_element_id
     end
     collection
