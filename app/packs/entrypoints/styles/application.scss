@@ -27,3 +27,14 @@
 .multiline-text {
   white-space: break-spaces;
 }
+
+.footer-social {
+  background: theme-color("primary");
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  height: 36px;
+  margin-left: 8px;
+  padding: 0;
+  width: 36px;
+}
