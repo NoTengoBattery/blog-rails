@@ -38,11 +38,15 @@ en:
       article:
         one: Article
         other: Articles
+      user:
+        one: User
+        other: Users
   close: Close
   errors:
     messages:
       format: 'must be one of the following formats: %{formats}'
       oversize: must be less than %{size}
+      unauthorized: You are not authorized to perform this action
     template:
       body: 'There were problems with the following fields:'
       header:
@@ -57,11 +61,27 @@ en:
       on_date: 'On'
       ours: Our articles
       theirs: Related articles
+    connect_me: Contact with me
+    paywall: We are so sorry, buy we have to pay to show you the remaining content. And no, we won't pay.
+    rate_limit: Apparently many request were mande and they rate-limit us. Try again later.
+    some_rights: Some rights reserved
+    unhappy: 'Didn''t like being here? You can delete your account and destroy all associated records using the following button:'
+    user:
+      my: My %{model}
   name: Blog
   nav:
     toggle: Toggle navigation bar
   success:
     messages:
-      created: "%{model} has been successfully created"
+      created: The %{model} has been successfully created
+      destroyed: The %{model} has been successfully destroyed
+      updated: The %{model} has been successfully updated
+  views:
+    pagination:
+      first: "« First"
+      last: Last »
+      next: Next ›
+      previous: "‹ Prev"
+      truncate: "…"
   warnings:
     sure: Are you sure? Once executed, this action can not be undone.

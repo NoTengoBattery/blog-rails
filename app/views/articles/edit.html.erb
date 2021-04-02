@@ -1,6 +1,6 @@
-<h1><%= t("actions.edit", model: @article.model_name.human) -%></h1>
+<h1><%= t("actions.edit", model: @article.model_name.human).humanize -%></h1>
 <p class="text-primary">
   <span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
-  <%= link_to t("actions.delete", model: @article.model_name.human), article_path(@article), method: :delete, data: { confirm: t("warnings.sure") } -%>
+  <%= link_to t("actions.delete", model: @article.model_name.human).humanize, article_path(@article), method: :delete, data: { confirm: t("warnings.sure") } -%>
 </p>
 <%= render 'form', article: @article, button_text: t("actions.article.edit") -%>

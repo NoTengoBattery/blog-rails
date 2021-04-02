@@ -17,7 +17,9 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: :User, foreign_key: :user_id, inverse_of: :articles
   has_one_attached :image
 
-  scope :eager, -> { with_attached_image }
+  scope :eager_image, -> { with_attached_image }
+  scope :eager_author, -> { includes(:author) }
+  scope :newest, -> { order(created_at: :desc) }
 
   # rubocop:disable Metrics/AbcSize
   def acceptable_image

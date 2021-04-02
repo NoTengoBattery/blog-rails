@@ -6,8 +6,7 @@
       <span>
         <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
         <%= t("misc.article.by") -%>
-        <!-- TODO -->
-        <%= link_to @article.author.display, home_path -%>
+        <%= link_to @article.author.display, user_path(@article.author) -%>
       </span>
     </div>
     <div>
@@ -20,7 +19,7 @@
     <div>
       <span>
         <span class="iconify" data-icon="ri:edit-fill" data-inline="false"></span>
-        <%= link_to t("actions.edit", model: @article.model_name.human), edit_article_path(@article) -%>
+        <%= link_to t("actions.edit", model: @article.model_name.human).humanize, edit_article_path(@article) -%>
       </span>
     </div>
     <div class="mt-2">

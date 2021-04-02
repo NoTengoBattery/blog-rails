@@ -38,16 +38,20 @@ es:
       article:
         one: Artículo
         other: Artículos
+      user:
+        one: Usuario
+        other: Usuarios
   close: Cerrar
   errors:
     messages:
       format: 'debe tener uno de los siguientes formatos: %{formats}'
       oversize: tiene que tener un tamaño menor %{size}
+      unauthorized: No estás autorizado para realizar esa acción
     template:
       body: 'Revise que los siguientes campos sean válidos:'
       header:
-        one: "%{model} no pudo guardarse debido a 1 error"
-        other: "%{model} no pudo guardarse debido a %{count} errores"
+        one: Este %{model} no pudo guardarse debido a 1 error
+        other: Este %{model} no pudo guardarse debido a %{count} errores
   external: Externo
   home: Inicio
   local: Local
@@ -57,11 +61,27 @@ es:
       on_date: El
       ours: Nuestros artículos
       theirs: Artículos relacionados
-  name: Blog
+    connect_me: Contacta conmigo
+    paywall: Lo sentimos, pero debemos pagar para mostrarte el resto del contenido. Y no, no vamos a pagar.
+    rate_limit: Al parecer se han hecho demasiadas solicitudes y fuimos limitados. Intenta más tarde.
+    some_rights: Algunos derechos reservados
+    unhappy: "¿No te gustó estar aquí? Puedes eliminar tu cuenta y destruir todos los registros asociados a ella utilizando el siguiente botón:"
+    user:
+      my: Mis %{model}
+  name: Relojes
   nav:
     toggle: Mostrar/ocultar barra de navegación
   success:
     messages:
-      created: "%{model} se ha creado exitosamente"
+      created: Este %{model} se ha creado exitosamente
+      destroyed: Este %{model} se ha destruido exitosamente
+      updated: Este %{model} se ha actualizado exitosamente
+  views:
+    pagination:
+      first: "« Prim"
+      last: Últ »
+      next: Sig ›
+      previous: "‹ Ant"
+      truncate: "…"
   warnings:
     sure: "¿Estás seguro? Una vez realizada, esta acción no se puede deshacer."

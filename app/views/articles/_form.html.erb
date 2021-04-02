@@ -2,7 +2,7 @@
   <%= render 'shared/form_errors', inst: article -%>
   <div class="form-group">
     <%= form.label :title, attr_name(:title, article) -%>
-    <%= form.text_field :title, class: "form-control" -%>
+    <%= form.text_field :title, class: "form-control", spellcheck: true -%>
   </div>
   <div class="form-group">
     <%= form.label :image, attr_name(:image, article) -%>
@@ -10,11 +10,11 @@
   </div>
   <div class="form-group">
     <%= form.label :image_caption, attr_name(:image_caption, article) -%>
-    <%= form.text_field :image_caption, class: "form-control" -%>
+    <%= form.text_field :image_caption, class: "form-control", spellcheck: true -%>
   </div>
   <div class="form-group">
     <%= form.label :content, attr_name(:content, article) -%>
-    <%= form.text_area :content, class: "form-control" -%>
+    <%= form.text_area :content, class: "form-control article-input", spellcheck: true -%>
   </div>
   <div class="form-group">
     <%= form.submit button_text, class: "btn btn-primary" -%>
