@@ -34,7 +34,6 @@ class RemoteArticle
   def self.build(keyword)
     uri = build_query(q_in_title: keyword, page: page_id).to_s
     article = -> { new(uri, (cached_remote_response(uri))["articles"][element_offset_id]) }
-    puts "{ page: #{page_id} ; current_element_id: #{current_element_id} ; element_offset_id : #{element_offset_id} }"
     article.call
   end
 
