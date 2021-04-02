@@ -29,7 +29,7 @@ module ArticlesHelper
 
   def article_author(record, params = {})
     if record.instance_of?(Article)
-      link_to(record.author.display, home_path, params) # TODO
+      link_to(record.author.display, user_path(record.author), params)
     elsif record.instance_of?(RemoteArticle)
       content_tag(:span, record.author, params) # rubocop:disable Rails/ContentTag
     end

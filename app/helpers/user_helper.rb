@@ -15,4 +15,8 @@ module UserHelper
       link_to I18n.t("devise.shared.links.sign_in"), user_session_path, params
     end
   end
+
+  def authorized?(user)
+    user == current_user
+  end
 end

@@ -10,6 +10,13 @@ es:
     sign_out: Cerrar sesión
     write: Escribir
   activerecord:
+    models:
+      article:
+        one: Artículo
+        other: Artículos
+      user:
+        one: Usuario
+        other: Usuarios
     attributes:
       article:
         author:
@@ -34,10 +41,6 @@ es:
         email:
           one: Correo electrónico
           other: Correos electrónicos
-    models:
-      article:
-        one: Artículo
-        other: Artículos
   close: Cerrar
   errors:
     messages:
@@ -47,12 +50,15 @@ es:
     template:
       body: 'Revise que los siguientes campos sean válidos:'
       header:
-        one: "%{model} no pudo guardarse debido a 1 error"
-        other: "%{model} no pudo guardarse debido a %{count} errores"
+        one: "Este %{model} no pudo guardarse debido a 1 error"
+        other: "Este %{model} no pudo guardarse debido a %{count} errores"
   external: Externo
   home: Inicio
   local: Local
   misc:
+    unhappy: "¿No te gustó estar aquí? Puedes eliminar tu cuenta y destruir todos los registros asociados a ella utilizando el siguiente botón:"
+    user:
+      my: "Mis %{model}"
     article:
       by: Por
       on_date: El

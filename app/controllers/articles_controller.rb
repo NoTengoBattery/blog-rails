@@ -4,9 +4,11 @@ class ArticlesController < ApplicationController
   before_action :authorize_user!, only: %i[edit update destroy]
 
   def index
-    @articles = Article.eager.page(1)
+    @articles = Article.eager_image.eager_author.newest.page(1)
     @remote_articles = RemoteArticle.page(1, "watches")
   end
+
+  def show; end
 
   def new
     @article = Article.new
@@ -21,6 +23,8 @@ class ArticlesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def edit; end
 
   def update
     if @article.update(article_params)

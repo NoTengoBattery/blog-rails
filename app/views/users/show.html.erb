@@ -1,0 +1,17 @@
+<h1>
+  <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+  <%= @user.display -%>
+</h1>
+<%- if authorized?(@user) -%>
+  <p>
+    <span class="iconify" data-icon="ri:edit-fill" data-inline="false"></span>
+    <%= link_to t("actions.edit", model: @user.model_name.human), edit_user_registration_path -%>
+  </p>
+<%- end -%>
+<h2>
+  <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
+  <%= t("misc.user.my", model: Article.model_name.human.pluralize).humanize -%>
+</h2>
+<div id="localList" class="list-group">
+  <%= render partial: "articles/list", collection: @articles, as: :article -%>
+</div>
