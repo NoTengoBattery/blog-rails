@@ -1,4 +1,4 @@
-project_name = "lifestyle-demo"
+project_name = "blogs-demo"
 deploy_to = "/www/sockets/rails"
 
 # The environment this Puma is going to run on
