@@ -3,6 +3,13 @@
 @use 'modules/bootstrap' as *;
 @use 'articles';
 
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .text-sans {
   font-family: $font-family-sans;
 }
