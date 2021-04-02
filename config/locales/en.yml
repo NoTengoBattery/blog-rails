@@ -68,7 +68,7 @@ en:
     unhappy: 'Didn''t like being here? You can delete your account and destroy all associated records using the following button:'
     user:
       my: My %{model}
-  name: Blog
+  name: Watches
   nav:
     toggle: Toggle navigation bar
   success:
