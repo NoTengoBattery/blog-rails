@@ -1,5 +1,5 @@
 <%= paginator.render do %>
-  <nav class="mt-4">
+  <nav class="mt-4 overflow-auto">
     <ul class="pagination mb-0">
       <%= first_page_tag unless current_page.first? %>
       <%= prev_page_tag unless current_page.first? %>
