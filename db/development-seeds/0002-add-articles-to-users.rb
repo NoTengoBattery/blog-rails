@@ -1,9 +1,12 @@
 progressbar = ProgressBar.create
-progressbar.total = 20
+progressbar.total = 500
 
 until progressbar.progress >= progressbar.total
   begin
-    FactoryBot.create(:article)
+    article = FactoryBot.build(:article)
+    user = User.order("RANDOM()").limit(1).first
+    article.author = user
+    article.save!
     progressbar.increment
   rescue ActiveRecord::RecordInvalid
     puts "\n#{$!}, skipping..."
