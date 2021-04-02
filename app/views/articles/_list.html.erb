@@ -1,10 +1,10 @@
 <aside class="row">
-  <div class="col-12">
-    <div class="r-16-9 shadow-sm">
+  <div class="col-12 col-lg-7 d-flex">
+    <div class="r-16-9 my-auto shadow-sm">
       <%= article_image article, class: "abs-cover text-truncate text-wrap", alt: article.image_caption -%>
     </div>
   </div>
-  <div class="col-12 order-1">
+  <div class="col-12 col-lg-5 order-1">
     <h1 class="h2 font-weight-bold mt-2"><%= article_link article, class: "text-body" -%></h1>
     <div class="mt-2">
       <div class="multiline-text"><%= truncate_text article.content, 200 -%></div>
