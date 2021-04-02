@@ -3,7 +3,7 @@ require "shared_rutines"
 
 RSpec.describe Article, type: :model do
   context "with validations" do
-    subject { FactoryBot.build(:article) }
+    subject { FactoryBot.create(:article) }
 
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_length_of(:title).is_at_least(Article::TITLE_MIN).is_at_most(Article::TITLE_MAX) }

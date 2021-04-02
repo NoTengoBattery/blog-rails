@@ -11,12 +11,13 @@ RSpec.describe "/articles", type: :request do
 
   let(:valid_attributes) do
     article = FactoryBot.build(:article)
+    user = FactoryBot.create(:user)
     valid_object = {}
     valid_object[:title] = article.title
     valid_object[:content] = article.content
     valid_object[:image_caption] = article.image_caption
     valid_object[:image] = fixture_file_upload(file_fixture("test.jpg"), "image/jpeg")
-    valid_object[:user_id] = article.user_id
+    valid_object[:user_id] = user.id
     valid_object
   end
 
