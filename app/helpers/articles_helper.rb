@@ -1,10 +1,10 @@
 module ArticlesHelper
   def img_large(record)
-    img_scale(record: record, w: 1920, h: 1080)
+    img_scale(record: record, w: 1100, h: 620)
   end
 
   def img_medium(record)
-    img_scale(record: record, w: 735, h: 415)
+    img_scale(record: record, w: 660, h: 370)
   end
 
   def img_small(record)
@@ -13,7 +13,7 @@ module ArticlesHelper
 
   def article_image(record, params = {})
     if record.instance_of?(Article)
-      image_tag(img_large(record), params)
+      image_tag(img_medium(record), params)
     elsif record.instance_of?(RemoteArticle)
       image_tag(record.image_url, params)
     end
