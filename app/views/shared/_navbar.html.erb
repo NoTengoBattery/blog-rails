@@ -14,16 +14,14 @@
           <%= link_to t("actions.write"), new_article_path, id: "write", class: "nav-link" -%>
         </li>
       </ul>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-1 dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarLocales" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="iconify" data-icon="ri:translate" data-inline="false"></span>
           </a>
           <%= render "shared/locales" -%>
         </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item mb-1 active">
           <%= sign_up_or_profile id: "userLink1", class: "btn btn-outline-primary text-uppercase mr-2" -%>
         </li>
         <li class="nav-item">
