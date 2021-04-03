@@ -114,9 +114,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 -   [Hodinkee](https://www.hodinkee.com/) for it's design as inspiration
--   Wei Huang for their astonishing [Work Sans](https://fonts.google.com/specimen/Work+Sans#about) font family
+-   Wei Huang for their astonishing [Work Sans](https://fonts.google.com/specimen/Work+Sans#about) sans-serif font family
 -   JetBrains for their amazing [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono#about) monospace font family
--   Frank Grießhammer for their wonderful [Source Serif Pro](https://fonts.google.com/specimen/Source+Serif+Pro#about) monospace font family
+-   Frank Grießhammer for their wonderful [Source Serif Pro](https://fonts.google.com/specimen/Source+Serif+Pro#about) serif font family
 -   NoTengoBattery for my amazing and time-saving [Rails Template](https://github.com/NoTengoBattery/rails6-webpacker/)
 
 ## 📝 License
