@@ -1,6 +1,6 @@
 {
   "name": "NoTengoBlog",
-  "version": "1.00",
+  "version": "1.02",
   "private": true,
   "dependencies": {
     "@csstools/normalize.css": "^11.0",
