@@ -1,0 +1,21 @@
+%fit-100 {
+  object-fit: cover;
+  width: 100%;
+}
+
+.article-cover {
+  @extend %fit-100;
+  height: 50vh;
+  min-height: 210px;
+}
+
+.articles-list {
+  hr:last-child {
+    display: none;
+  }
+}
+
+.article-input {
+  height: 50vh;
+  min-height: 240px;
+}

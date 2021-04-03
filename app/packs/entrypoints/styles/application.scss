@@ -1,1 +1,47 @@
-@use '@csstools/normalize.css/normalize';
+@use '@csstools/normalize.css/normalize' as *;
+@use 'modules/fontsource' as *;
+@use 'modules/bootstrap' as *;
+@use 'articles';
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.text-sans {
+  font-family: $font-family-sans;
+}
+
+.r-16-9 {
+  padding-top: calc(9 * 100% / 16);
+  position: relative;
+  width: 100%;
+}
+
+.abs-cover {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.multiline-text {
+  white-space: break-spaces;
+}
+
+.footer-social {
+  background: theme-color('primary');
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  height: 36px;
+  margin-left: 8px;
+  padding: 0;
+  width: 36px;
+}

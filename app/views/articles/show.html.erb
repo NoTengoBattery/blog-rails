@@ -1,0 +1,29 @@
+<main>
+  <article>
+    <%= image_tag img_large(@article), class: "img-fluid article-cover", alt: @article.image_caption -%>
+    <h1 class="font-weight-bold mt-2"><%= @article.title -%></h1>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+        <%= t("misc.article.by") -%>
+        <%= link_to @article.author.display, user_path(@article.author) -%>
+      </span>
+    </div>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
+        <%= t("misc.article.on_date") -%>
+        <%= l(@article.created_at) -%>
+      </span>
+    </div>
+    <div>
+      <span>
+        <span class="iconify" data-icon="ri:edit-fill" data-inline="false"></span>
+        <%= link_to t("actions.edit", model: @article.model_name.human).humanize, edit_article_path(@article) -%>
+      </span>
+    </div>
+    <div class="mt-2">
+      <div class="multiline-text"><%= @article.content -%></div>
+    </div>
+  </article>
+</main>
