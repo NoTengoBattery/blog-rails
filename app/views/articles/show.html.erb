@@ -19,7 +19,7 @@
     <div>
       <span>
         <span class="iconify" data-icon="ri:edit-fill" data-inline="false"></span>
-        <%= link_to t("actions.edit", model: @article.model_name.human).humanize, edit_article_path(@article) -%>
+        <%= link_to t("actions.edit", model: @article.model_name.human).humanize, edit_article_path(@article).humanize -%>
       </span>
     </div>
     <div class="mt-2">
