@@ -5,7 +5,7 @@
   </button>
     <p class="lead">
       <strong>
-        <%= t("errors.template.header", count: inst.errors.count, model:  inst.class.model_name.human) -%>
+        <%= t("errors.template.header", count: inst.errors.count, model:  inst.class.model_name.human).humanize -%>
       </strong>
     </p>
     <span>
