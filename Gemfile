@@ -19,6 +19,7 @@ gem "jbuilder", "~> 2.11", ">= 2.11"
 # gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 
 # Extra gems required for this project
+gem "aws-sdk-s3", require: false
 gem "devise", "~> 4.7", ">= 4.7"
 gem "devise-i18n", "~> 1.9", ">= 1.9"
 gem "image_processing", "~> 1.12", ">= 1.12"

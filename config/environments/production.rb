@@ -114,4 +114,5 @@ Rails.application.configure do
 
   # Mailer option for Devise (change the host name!)
   config.action_mailer.default_url_options = { host: "blog.demo.notengobattery.com", port: 3000 }
+  config.active_storage.service = :amazon
 end
