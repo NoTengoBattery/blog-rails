@@ -35,7 +35,7 @@ For this application, the latest version of WebPack is the asset pipeline, inste
 
 ## Live Demo
 
-Visit this demo on my website [notengobattery.com](https://blog.demo.notengobattery.com/)
+Visit this demo on [Heroku](https://intense-lake-17315.herokuapp.com/)
 
 ## Getting Started
 
