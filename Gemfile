@@ -22,7 +22,7 @@ gem "jbuilder", "~> 2.11", ">= 2.11"
 gem "aws-sdk-s3", require: false
 gem "devise", "~> 4.7", ">= 4.7"
 gem "devise-i18n", "~> 1.9", ">= 1.9"
-gem "image_processing", "~> 1.12", ">= 1.12"
+gem "image_processing", "~> 1.12"
 gem "kaminari", "~> 1.2", ">= 1.2"
 gem "mina", "~> 1.2", ">= 1.2"
 gem "mina-ng-puma", github: "NoTengoBattery/mina-ng-puma"
